@@ -1,21 +1,25 @@
-# tugas-vuejs
+## Tugas mata kuliah pemrograman web
 
-## Project setup
+### install semua dependensi
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### compile dan jalankan di lokal server
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### compile dan build untuk production
+
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### linting file
+
 ```
 npm run lint
 ```
