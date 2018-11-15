@@ -12,12 +12,6 @@ npm install
 npm run serve
 ```
 
-### compile dan build untuk production
-
-```
-npm run build
-```
-
 ### linting file
 
 ```
