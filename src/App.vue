@@ -14,18 +14,31 @@
         </div>
       </div>
       <div class="bottom-section">
-        <h3 class="section-title">FEATURED ARTICLE</h3>
-        <!-- accordion component -->
+        <h3 class="section-title">FAQ</h3>
+        <div class="categories">
+          <vue-faq-accordion 
+            :items="faqItems"
+            activeColor="#56e39f"
+            borderColor="#292f36"
+            fontCOlor="#292f36"
+            class="faq-accordion"
+          />
+        </div>
       </div>
     </div>
-    <div class="footer">
-      <!-- change to footer component soon -->
-    </div>
+    <footer-component />
   </div>
 </template>
 
 <script>
-import { Navbar, Hero, Thumbnail, BrowseButton } from "@/components";
+import {
+  Navbar,
+  Hero,
+  Thumbnail,
+  BrowseButton,
+  FooterComponent
+} from "@/components";
+import VueFaqAccordion from "vue-faq-accordion";
 
 export default {
   name: "app",
@@ -33,7 +46,9 @@ export default {
     Navbar,
     Hero,
     Thumbnail,
-    BrowseButton
+    BrowseButton,
+    VueFaqAccordion,
+    FooterComponent
   },
   data() {
     return {
@@ -81,7 +96,39 @@ export default {
         {
           src: require("@/assets/images/overwatch.jpg"),
           title: "Overwatch",
-          count: "120"
+          count: "20"
+        }
+      ],
+      faqItems: [
+        {
+          title: "What is E-News?",
+          value:
+            "E-News.com is a website where anyone can read and write articles about E-Sports.",
+          category: "General Questions"
+        },
+        {
+          title: "Who can write on E-News?",
+          value:
+            "E-News is an open publishing platform, and we welcome anyone to create an account and share their stories with our community. There is no approval process. When you are ready to publish, it immediately becomes available for reading and sharing.",
+          category: "General Questions"
+        },
+        {
+          title: "Write an article",
+          value:
+            'To begin writing a new article, click the "Create Article" button.',
+          category: "Contributing"
+        },
+        {
+          title: "Liked an article",
+          value:
+            "Click the thumbs up icon under a article. Your likes will help an article to become more popular.",
+          category: "Contributing"
+        },
+        {
+          title: "Report an article",
+          value:
+            "If you feel an article is not following our guidelines, you can report the article by clicking the flag icon and file a report.",
+          category: "Contributing"
         }
       ]
     };
@@ -92,6 +139,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url("https://fonts.googleapis.com/css?family=Righteous");
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -129,10 +177,7 @@ export default {
   color: #292f36;
 }
 
-.footer {
-  height: 250px;
-  width: 100%;
-  background-color: #292f36;
-  border-top: 4px solid #56e39f;
+.faq-accordion {
+  font-family: "Lato", sans-serif;
 }
 </style>

@@ -6,11 +6,11 @@
         >
             <div v-if="show" class="menu-content" >
               <div class="content-container">
-                <a>home</a>
-                <a>home</a>
-                <a>home</a>
-                <a>home</a>
-                <a>home</a>
+                <a class="menu-item">HOME</a>
+                <a class="menu-item">BROWSE CATEGORY</a>
+                <a class="menu-item">TOP NEWS</a>
+                <a class="menu-item">SIGN UP</a>
+                <a class="menu-item">LOGIN</a>
               </div>
             </div>
         </transition>
@@ -53,5 +53,16 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.menu-item {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0px 50px;
+  color: #292f36;
+  cursor: pointer;
+}
+.menu-item:hover {
+  border-bottom: 0.75px solid #292f36;
 }
 </style>

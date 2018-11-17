@@ -3,7 +3,7 @@
         <slider>
             <slider-item v-for="(item, index) in heroList" :key="index" >
               <div>
-                <img :src="item.src"/>
+                <img :src="item.src" class="headline-img"/>
                 <div class="overlay">
                   <h1 class="headline-title">{{item.title}}</h1>
                   <p class="headline-desc">{{item.desc}}</p>
@@ -27,26 +27,20 @@ export default {
     return {
       heroList: [
         {
-          src: require("@/assets/images/dota_2.jpg"),
+          src: require("@/assets/images/dota2_headline.jpg"),
           title: "Dota 2",
           desc:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut eum temporibus voluptatem officiis cumque harum amet incidunt similique? Rem harum alias error sapiente sed nemo quia perspiciatis, nam a."
         },
         {
-          src: require("@/assets/images/dota_2.jpg"),
-          title: "Dota 2",
+          src: require("@/assets/images/pubg_headline.jpg"),
+          title: "PUBG",
           desc:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut eum temporibus voluptatem officiis cumque harum amet incidunt similique? Rem harum alias error sapiente sed nemo quia perspiciatis, nam a."
         },
         {
-          src: require("@/assets/images/dota_2.jpg"),
-          title: "Dota 2",
-          desc:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut eum temporibus voluptatem officiis cumque harum amet incidunt similique? Rem harum alias error sapiente sed nemo quia perspiciatis, nam a."
-        },
-        {
-          src: require("@/assets/images/dota_2.jpg"),
-          title: "Dota 2",
+          src: require("@/assets/images/csgo_headline.jpg"),
+          title: "CSGO",
           desc:
             "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut eum temporibus voluptatem officiis cumque harum amet incidunt similique? Rem harum alias error sapiente sed nemo quia perspiciatis, nam a."
         }
@@ -77,17 +71,24 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.headline-img {
+  height: 100%;
+  width: 100%;
+}
 .headline-title {
+  max-width: 90%;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  margin: 230px 0px 10px 40px;
+  margin: 230px 0px 5px 60px;
   color: white;
 }
 .headline-desc {
+  max-width: 90%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  margin: 0px 0px 0px 40px;
+  margin: 0px 0px 0px 60px;
   color: white;
 }
 </style>
+ 

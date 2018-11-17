@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="nav-container">
-          <h3>LOGO</h3>
+          <a class="logo">E-NEWS!</a>
           <burger />
         </div>
     </div>
@@ -34,5 +34,11 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.logo {
+  font-family: "Righteous", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #56e39f;
 }
 </style>
