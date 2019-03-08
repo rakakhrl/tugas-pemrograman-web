@@ -12,7 +12,7 @@ npm install
 npm run serve
 ```
 
-### linting file
+### jalankan eslint
 
 ```
 npm run lint
